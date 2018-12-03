@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Logement index{% endblock %}
+
+{% block body %}
+    <h1>Logement index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Prix</th>
+                <th>Surface</th>
+                <th>NbChambres</th>
+                <th>Description</th>
+                <th>DateCreation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for logement in logements %}
+            <tr>
+                <td>{{ logement.id }}</td>
+                <td>{{ logement.image }}</td>
+                <td>{{ logement.prix }}</td>
+                <td>{{ logement.surface }}</td>
+                <td>{{ logement.nbChambres }}</td>
+                <td>{{ logement.description }}</td>
+                <td>{{ logement.dateCreation ? logement.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('logement_show', {'id': logement.id}) }}">show</a>
+                    <a href="{{ path('logement_edit', {'id': logement.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('logement_new') }}">Create new</a>
+{% endblock %}

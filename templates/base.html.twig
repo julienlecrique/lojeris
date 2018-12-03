@@ -2,11 +2,79 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Lojeris!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
+    
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% block header %}
+    <header class="site-header">
+        <div class="cta-header">
+            <div class="container">
+                <ul class="cta-contact inline-list">
+                    <li>Téléphone : <a href="tel:0123456789">0123456789</a></li>
+                    <li>Email : <a href="mailto:contact@lojeris.fr">contact@lojeris.fr</a></li>
+                </ul>
+                <div class="cta-social">
+                    <ul class="inline-list">
+                        <li>
+                            <a href="http://www.facebook.com">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.twitter.com">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container main-header">
+            <a href="index.html" class="logo">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Notre Agence</a></li>
+                    <li><a href="#">Biens Immobiliers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    {% endblock %}
+
+    {% block body %}{% endblock %}
+
+    {% block footer %}
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            Copyright © 2013 Lojeris
+        </div>
+    </footer>
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
     </body>
 </html>

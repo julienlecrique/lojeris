@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Tipe{% endblock %}
+
+{% block body %}
+    <h1>Edit Tipe</h1>
+
+    {{ include('tipe/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('tipe_index') }}">back to list</a>
+
+    {{ include('tipe/_delete_form.html.twig') }}
+{% endblock %}
