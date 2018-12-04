@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Logement;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -16,8 +17,9 @@ class DefaultController extends AbstractController
      */
     public function homepage()
     {
+        $logements = $this->getDoctrine()->getRepository(Logement::class)->findAll();
         return $this->render('default/homepage.html.twig', [
-            'controller_name' => 'DefaultController',
+            'logements' => $logements
         ]);
     }
 }

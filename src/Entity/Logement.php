@@ -66,7 +66,7 @@ class Logement
     private $dateCreation;
 
     /**
-     * @var \Quartier
+     * @var Quartier
      *
      * @ORM\ManyToOne(targetEntity="Quartier")
      * @ORM\JoinColumns({
@@ -76,7 +76,7 @@ class Logement
     private $quartier;
 
     /**
-     * @var \Tipe
+     * @var Tipe
      *
      * @ORM\ManyToOne(targetEntity="Tipe")
      * @ORM\JoinColumns({
@@ -86,7 +86,7 @@ class Logement
     private $type;
 
     /**
-     * @var \Utilisateur
+     * @var Utilisateur
      *
      * @ORM\ManyToOne(targetEntity="Utilisateur")
      * @ORM\JoinColumns({
@@ -96,7 +96,7 @@ class Logement
     private $utilisateur;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var Doctrine\Common\Collections\Collection
      *
      * @ORM\ManyToMany(targetEntity="Commercial", inversedBy="logement")
      * @ORM\JoinTable(name="logement_has_commercial",

@@ -36,7 +36,7 @@ class Image
     private $alt;
 
     /**
-     * @var \Logement
+     * @var Logement
      *
      * @ORM\ManyToOne(targetEntity="Logement")
      * @ORM\JoinColumns({

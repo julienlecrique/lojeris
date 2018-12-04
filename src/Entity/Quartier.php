@@ -29,7 +29,7 @@ class Quartier
     private $libelle;
 
     /**
-     * @var \Ville
+     * @var Ville
      *
      * @ORM\ManyToOne(targetEntity="Ville")
      * @ORM\JoinColumns({
