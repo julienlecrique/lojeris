@@ -1,0 +1,5 @@
+<ul class="list-unstyled text-small">
+    {% for ville in villes %}
+
+    <li><a class="text-muted" href="{{ path('ville_show', {'id': ville.id}) }}">{{ ville.libelle }}</a></li>
+{% endfor %}

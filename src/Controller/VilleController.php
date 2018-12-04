@@ -90,4 +90,12 @@ class VilleController extends AbstractController
 
         return $this->redirectToRoute('ville_index');
     }
+
+
+    public function villeList()
+    {
+        $villes = $this->getDoctrine()->getRepository(Ville::class)->findAll();
+        return $this->render('ville/villelist.html.twig', ['villes' => $villes]);
+
+    }
 }

@@ -13,7 +13,7 @@
     <header class="site-header">
         <div class="cta-header">
             <div class="container">
-                <ul class="cta-contact inline-list">
+                <ul class="cta-contact inline-list mt-3">
                     <li>Téléphone : <a href="tel:0123456789">0123456789</a></li>
                     <li>Email : <a href="mailto:contact@lojeris.fr">contact@lojeris.fr</a></li>
                 </ul>
@@ -21,7 +21,7 @@
                     <ul class="inline-list">
                         <li>
                             <a href="http://www.facebook.com">
-                                <span class="fa-stack fa-lg">
+                                <span class="fa-stack fa-lg mt-3">
                                   <i class="fa fa-circle fa-stack-2x"></i>
                                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                                 </span>
@@ -29,7 +29,7 @@
                         </li>
                         <li>
                             <a href="http://www.twitter.com">
-                                <span class="fa-stack fa-lg">
+                                <span class="fa-stack fa-lg mt-3">
                                   <i class="fa fa-circle fa-stack-2x"></i>
                                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                                 </span>
@@ -40,18 +40,15 @@
             </div>
         </div>
         <div class="container main-header">
-            <a href="index.html" class="logo">
-                <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
+
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#">Accueil</a></li>
+                    <li><a href="{{ path('homepage') }}">Accueil</a></li>
                     <li><a href="#">Notre Agence</a></li>
                     <li><a href="#">Biens Immobiliers</a></li>
                 </ul>
+
+                {{  render(controller('App\\Controller\\VilleController::villeList')) }}
             </nav>
         </div>
     </header>
@@ -68,7 +65,7 @@
 
 
     <footer class="site-footer">
-        <div class="container">
+        <div class="container text-center">
             Copyright © 2013 Lojeris
         </div>
     </footer>

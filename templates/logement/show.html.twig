@@ -3,40 +3,40 @@
 {% block title %}Logement{% endblock %}
 
 {% block body %}
-    <h1>Logement</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ logement.id }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ logement.image }}</td>
-            </tr>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
+         style="background-image:url('{{ asset('uploads/' ~ logement.image) }}');background-repeat: no-repeat;background-attachment: fixed;background-position: center;background-size: cover; ">
+        <div class="col-md-5 p-lg-5 mx-auto my-5" style="background-color: grey;opacity: 0.7;">
+            <h1 class="display-4 font-weight-normal">{{ logement.type.libelle }}</h1>
+            <p class="lead font-weight-normal">{{ logement.description }}</p>
+            <a class="btn btn-primary" href="#">Se renseigner</a>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+        <table class="table text-center rounded col-md-5" style="background-color: lightgrey;opacity: 0.8;">
+
             <tr>
                 <th>Prix</th>
-                <td>{{ logement.prix }}</td>
+                <td>{{ logement.prix }} €</td>
             </tr>
             <tr>
-                <th>Surface</th>
-                <td>{{ logement.surface }}</td>
+                <th>Superficie</th>
+                <td>{{ logement.surface }} m²</td>
             </tr>
             <tr>
-                <th>NbChambres</th>
+                <th>Nombres de Chambres</th>
                 <td>{{ logement.nbChambres }}</td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>{{ logement.description }}</td>
+                <th>Quartier</th>
+                <td>{{ logement.quartier.libelle }}</td>
             </tr>
             <tr>
-                <th>DateCreation</th>
-                <td>{{ logement.dateCreation ? logement.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                <th>Date de la publication</th>
+                <td>{{ logement.dateCreation ? logement.dateCreation|date('d/m/Y') : '' }}</td>
             </tr>
-        </tbody>
-    </table>
+        </table>
+    </div>
 
     <a href="{{ path('logement_index') }}">back to list</a>
 
