@@ -1,0 +1,11 @@
+easy_admin:
+    site_name: 'Kekri corp.'
+    entities:
+        # List the entity class name you want to manage
+        - App\Entity\Commercial
+        - App\Entity\Image
+        - App\Entity\Logement
+        - App\Entity\Quartier
+        - App\Entity\Tipe
+        - App\Entity\Utilisateur
+        - App\Entity\Ville

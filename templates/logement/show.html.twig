@@ -9,11 +9,11 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5" style="background-color: grey;opacity: 0.7;">
             <h1 class="display-4 font-weight-normal">{{ logement.type.libelle }}</h1>
             <p class="lead font-weight-normal">{{ logement.description }}</p>
-            <a class="btn btn-primary" href="#">Se renseigner</a>
+            <button class="btn btn-primary" id="js-toggle">Se renseigner</button>
         </div>
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-        <table class="table text-center rounded col-md-5" style="background-color: lightgrey;opacity: 0.8;">
+        <table class="text-center rounded col-md-12" id="test" style="background-color: grey;opacity: 0.78; display: none;">
 
             <tr>
                 <th>Prix</th>

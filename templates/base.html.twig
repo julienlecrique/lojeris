@@ -75,5 +75,15 @@
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        const ELEMENT = $('#test');
+$('#js-toggle').on('click', function () {
+    ELEMENT.slideToggle();
+    $(this).text(($(this).text() === 'Se renseigner') ? 'Fermer' : 'Se renseigner');
+});
+
+    </script>
     </body>
 </html>
